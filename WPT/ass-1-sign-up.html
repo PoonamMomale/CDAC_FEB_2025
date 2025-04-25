@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to top right, #cdeff0, #ffffff);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main-box {
+      width: 750px;
+      display: flex;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+    }
+
+    .left-panel, .right-panel {
+      padding: 40px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .left-panel {
+      background-color: #f9f9f9;
+    }
+
+    .left-panel h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .social-icons button {
+      width: 38px;
+      height: 38px;
+      border: none;
+      border-radius: 50%;
+      background-color: #eee;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .form-line {
+      margin-bottom: 15px;
+    }
+
+    .form-line input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .forgot-link {
+      text-align: center;
+      font-size: 12px;
+      margin-bottom: 20px;
+      color: #777;
+      cursor: pointer;
+    }
+
+    .sign-btn {
+      background-color: #526458;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .sign-btn:hover {
+      background-color: #187bcd;
+    }
+
+    .right-panel {
+      background-color: #526458;
+      color: white;
+      text-align: center;
+    }
+
+    .right-panel h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .right-panel p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .right-panel button {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 10px 25px;
+      border-radius: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .right-panel button:hover {
+      background-color: #fff;
+      color: #526458;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-box">
+    <div class="left-panel">
+      <h2>Sign in</h2>
+      <div class="social-icons">
+        <button>🔒</button>
+        <button>⚙️</button>
+        <button>G</button>
+      </div>
+      <p style="font-size: 13px; margin-bottom: 15px; color: #555;">Or sign in using E-Mail Address</p>
+      <div class="form-line">
+        <input type="email" placeholder="Email">
+      </div>
+      <div class="form-line">
+        <input type="password" placeholder="Password">
+      </div>
+      <div class="forgot-link">Forgot your password?</div>
+      <button class="sign-btn">SIGN IN</button>
+    </div>
+    <div class="right-panel">
+      <h2>Create,<br>Account!</h2>
+      <p>Sign up if you still don't have an account ...</p>
+      <button>SIGN UP</button>
+    </div>
+  </div>
+</body>
+</html>

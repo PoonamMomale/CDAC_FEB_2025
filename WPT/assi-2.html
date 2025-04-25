@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assi - 2</title>
+    <style>
+        .green {
+            color : green;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+   <div>
+        <p id="q1">
+            It is rightly said that being disciplined is essential in life. When a person leads a disciplined life, they set an easy path to success. They will develop an approach to happiness and a beautiful future ahead. Being disciplined is the practice of having a scheduled daily routine which helps an individual to be punctual and hard-working. An individual is taught what being disciplined means from the time they are young. Even though discipline takes a lot of effort, the advantages of a disciplined life make it a worthwhile endeavour.
+        </p>
+        <button onclick="changeStyle()">Change Style</button>
+   </div>
+   <br>
+   <div>
+        <form id="submit-form">
+            First Name: <input type="text" id="fname"><br><br>
+            Last Name: <input type="text" id="lname"><br><br>
+            Contact No.: <input type="text" id="contact"><br><br>
+            Email ID: <input type="text" id="email"><br><br>
+            <button type="button" onclick="showData()">Submit</button>
+        </form>
+        <h3>DATA</h3>
+        <div id="show-data"></div>
+   </div>
+   <br>
+   <div>
+        <select id="list">
+            <option value="op1">Option 1</option>
+            <option value="op2">Option 2</option>
+            <option value="op3">Option 3</option>
+            <option value="op4">Option 4</option>
+        </select>
+        <button onclick="deleteListItem()">Remove</button>
+   </div>
+   <br>
+   <div>
+      <p>
+        <a href="#" onmouseover="highlightWords(true)" onmouseout="highlightWords(false)">
+            We have just started <b>this</b> section for the users (<b>beginner</b> to intermediate) who 
+            <b>want</b> to work with <b>various</b> JavaScript <b>problems</b> and write scripts online to 
+            <b>test</b> their JavaScript <b>skill</b>.
+       </a>
+      </p>
+   </div>
+</body>
+<script>
+
+    function changeStyle() {
+        let p = document.getElementById("q1");
+        p.style.fontFamily = "Tahoma";
+        p.style.fontSize = "22px";
+        p.style.color = "#915591";
+    }
+
+    function showData() {
+      const fname = document.getElementById("fname").value;
+      const lname = document.getElementById("lname").value;
+      const contact = document.getElementById("contact").value;
+      const email = document.getElementById("email").value;
+
+      document.getElementById("show-data").innerHTML =
+        `<p>First Name: ${fname}</p>
+         <p>Last Name: ${lname}</p>
+         <p>Contact No.: ${contact}</p>
+         <p>Email ID: ${email}</p>`;
+    }
+
+    function deleteListItem() {
+        const item = document.getElementById("list");
+        item.remove(item.selectedIndex);
+    }
+
+    function highlightWords(state) {
+        const words = document.getElementsByTagName("b");
+        for(let i=0; i<words.length; i++) {
+            words[i].className = state ? 'green' : '';
+        }
+    }
+</script>
+</html>
